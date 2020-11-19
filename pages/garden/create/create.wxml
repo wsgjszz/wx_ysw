@@ -1,0 +1,28 @@
+<!--pages/garden/create/create.wxml-->
+<view>
+  <view class="card">
+    <view class="card-title">苗圃简介</view>
+    <van-cell-group>
+      <van-field value="{{ message }}" type="textarea" placeholder="请填写苗圃特色苗木品种描述等信息" autosize border="{{ false }}" bind:change="onChange0" />
+    </van-cell-group>
+    <view class="upload">
+      <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" max-count="1" />
+    </view>
+  </view>
+  <!-- 各类选项 -->
+  <view class="options">
+    <van-cell-group>
+      <!-- 联系人 -->
+      <van-field value="{{ contact }}" clearable label="基地名称" placeholder="请输入基地名称" bind:change="onChange1" />
+      <!-- 联系人 -->
+      <van-field value="{{ contact }}" clearable label="基地地址" placeholder="请输入基地地址" bind:change="onChange2" />
+      <!-- 联系人 -->
+      <van-field value="{{ contact }}" clearable label="联系人" placeholder="请输入联系人姓名" bind:change="onChange3" />
+      <!-- 手机 -->
+      <van-field value="{{ phone }}" clearable type="number" label="联系电话" placeholder="请输入联系电话" border="{{ false }}" bind:change="onChange4" />
+    </van-cell-group>
+  </view>
+  <view class="button">
+    <van-button type="primary" size="large" color="#5bc32c" bind:click="create">创建</van-button>
+  </view>
+</view>

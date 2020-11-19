@@ -1,0 +1,31 @@
+/* pages/index/index.wxss */
+.card{
+  margin: 15rpx auto 0 auto;
+  border-bottom: 2rpx solid #e9e9e9;
+}
+.card .left{
+  margin: 30rpx 10rpx;
+  width: 300rpx;
+  display: inline-block;
+}
+.card .card-title{
+  margin-bottom: 10rpx;
+  font-weight: 600;
+}
+.card .card-context{
+  font-size: 30rpx;
+  font-weight: 330;
+}
+.card .card-btn{
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 160rpx;
+  display: inline-block;
+}
+.card .card-btn van-icon:hover{
+  width: 80%;
+  height: 80%;
+  margin-left: -20rpx;
+  border: 2rpx solid #9df177;
+  border-radius: 50%;
+}

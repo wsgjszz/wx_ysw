@@ -1,0 +1,94 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/buy/buy",
+    "pages/index/buy/detail/detail",
+    "pages/index/sale/sale",
+    "pages/index/sale/detail/detail",
+    "pages/index/release/release",
+    "pages/login/login",
+    "pages/garden/garden",
+    "pages/garden/detail/detail",
+    "pages/garden/create/create",
+    "pages/circle/circle",
+    "pages/circle/detail/detail",
+    "pages/circle/create/create",
+    "pages/promotion/promotion",
+    "pages/promotion/detail/detail",
+    "pages/promotion/create/create",
+    "pages/user/user",
+    "pages/user/setting/setting",
+    "pages/user/release/release",
+    "pages/user/message/message",
+    "pages/user/myGarden/myGarden",
+    "pages/user/myCircle/myCircle",
+    "pages/user/feedback/feedback",
+    "pages/user/help/help",
+    "pages/user/stars/stars"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "园商网",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index"
+      },
+      {
+        "pagePath": "pages/garden/garden"
+      },
+      {
+        "pagePath": "pages/circle/circle"
+      },
+      {
+        "pagePath": "pages/promotion/promotion"
+      },
+      {
+        "pagePath": "pages/user/user"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "/compoments/@vant/weapp/dist/button/index",
+    "van-icon": "/compoments/@vant/weapp/dist/icon/index",
+    "van-row": "/compoments/@vant/weapp/dist/row/index",
+    "van-col": "/compoments/@vant/weapp/dist/col/index",
+    "van-image": "/compoments/@vant/weapp/dist/image/index",
+    "van-tabbar": "/compoments/@vant/weapp/dist/tabbar/index",
+    "van-tabbar-item": "/compoments/@vant/weapp/dist/tabbar-item/index",
+    "van-tab": "/compoments/@vant/weapp/dist/tab/index",
+    "van-tabs": "/compoments/@vant/weapp/dist/tabs/index",
+    "van-cell": "/compoments/@vant/weapp/dist/cell/index",
+    "van-cell-group": "/compoments/@vant/weapp/dist/cell-group/index",
+    "van-dropdown-menu": "/compoments/@vant/weapp/dist/dropdown-menu/index",
+    "van-dropdown-item": "/compoments/@vant/weapp/dist/dropdown-item/index",
+    "van-panel": "/compoments/@vant/weapp/dist/panel/index",
+    "van-card": "/compoments/@vant/weapp/dist/card/index",
+    "van-field": "/compoments/@vant/weapp/dist/field/index",
+    "van-grid": "/compoments/@vant/weapp/dist/grid/index",
+    "van-grid-item": "/compoments/@vant/weapp/dist/grid-item/index",
+    "van-radio": "/compoments/@vant/weapp/dist/radio/index",
+    "van-radio-group": "/compoments/@vant/weapp/dist/radio-group/index",
+    "van-toast": "/compoments/@vant/weapp/dist/toast/index",
+    "van-popup": "/compoments/@vant/weapp/dist/popup/index",
+    "van-area": "/compoments/@vant/weapp/dist/area/index",
+    "van-uploader": "/compoments/@vant/weapp/dist/uploader/index",
+    "van-divider": "/compoments/@vant/weapp/dist/divider/index",
+    "i-page": "/compoments/iview/dist/page/index",
+    "i-icon": "/compoments/iview/dist/icon/index",
+    "i-panel": "/compoments/iview/dist/panel/index",
+    "i-card": "/compoments/iview/dist/card/index",
+    "i-cell-group": "/compoments/iview/dist/cell-group/index",
+    "i-cell": "/compoments/iview/dist/cell/index",
+    "i-swipeout": "/compoments/iview/dist/swipeout/index",
+    "i-action-sheet": "/compoments/iview/dist/action-sheet/index"
+  }
+}

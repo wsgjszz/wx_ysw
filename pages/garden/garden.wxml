@@ -1,0 +1,21 @@
+<!--pages/garden/garden.wxml-->
+<scroll-view class="scroll" scroll-y="true" style="height: 1000rpx;">
+  <view wx:for="{{list}}" wx:key="index" class="card" data-id="{{item.id}}" catchtap="toDetail">
+    <van-image width="712rpx" height="350rpx" fit="cover" src="{{item.picture}}" />
+    <view class="card-title-bg"></view>
+    <view class="card-title">{{item.title}}</view>
+  </view>
+  <view wx:if="{{total!=0}}" class="page">
+    <van-row>
+      <van-col offset="3" span="18">
+        <i-page current="{{ current }}" total="{{total}}" bind:change="handleChange">
+          <view slot="prev">Prev</view>
+          <view slot="next">Next</view>
+        </i-page>
+      </van-col>
+    </van-row>
+  </view>
+</scroll-view>
+<view class="button">
+  <van-button type="primary" block color="#5bc32c" catchtap="toCreate">创建苗圃</van-button>
+</view>

@@ -1,0 +1,14 @@
+<!--pages/user/feedback/feedback.wxml-->
+<view class="card">
+  <van-dropdown-menu active-color="#5bc32c">
+    <van-dropdown-item value="{{ value }}" options="{{ option }}" bind:change="onChange" />
+  </van-dropdown-menu>
+  <view class="card-title">问题描述</view>
+  <van-cell-group>
+    <van-field value="{{ message }}" type="textarea" placeholder="请填写详细的问题反馈信息" autosize border="{{ false }}" bind:change="onChange0" />
+  </van-cell-group>
+</view>
+<view class="button">
+  <van-button type="primary" size="large" color="#5bc32c" bind:click="submit">提交反馈</van-button>
+  <van-button type="primary" size="large" color="#5bc32c" open-type="contact" show-message-card="{{true}}">联系客服</van-button>
+</view>

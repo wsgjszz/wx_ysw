@@ -1,0 +1,70 @@
+<!--pages/promotion/create/create.wxml-->
+<view class="myContainer">
+  <!-- 各类选项 -->
+  <view class="options">
+    <van-cell-group>
+      <!-- 联系人 -->
+      <van-field value="{{ title }}" clearable label="品种名称" placeholder="请输入品种名称" bind:change="onChange1" />
+      <!-- 产品分类 -->
+      <van-dropdown-menu active-color="#5bc32c">
+        <van-dropdown-item value="{{ value }}" options="{{ option }}"  bind:change="onChange" />
+      </van-dropdown-menu>
+      <!-- 库存 -->
+      <van-field value="{{ stock }}" type="number" clearable label="库存量" placeholder="请输入库存量" bind:change="onChange2" />
+      <!-- 售价 -->
+      <van-field value="{{ price }}" type="number" clearable label="售价" placeholder="按 元/颗" bind:change="onChange3" />
+      <!-- 联系人 -->
+      <van-field value="{{ contact }}" clearable label="联系人" placeholder="请输入联系人姓名" bind:change="onChange4" />
+      <!-- 电话 -->
+      <van-field value="{{ phone }}" clearable type="number" label="电话" placeholder="请输入联系电话" bind:change="onChange5" />
+      <!-- 商品来源 -->
+      <van-field value="{{ source }}" clearable label="商品来源" placeholder="请输入商品来源" bind:change="onChange11" />
+      <!-- 备注信息 -->
+      <van-field value="{{ bz }}" clearable label="备注信息" placeholder="请输入备注信息" bind:change="onChange12" />
+      <!-- 出苗地 -->
+      <van-cell title="出苗地" is-link bind:click="showPopup" />
+      <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+        <van-area area-list="{{ areaList }}" bind:cancel="onClose" bind:confirm="onConfirm" title="出苗地" />
+      </van-popup>
+      <!-- 品种规格 -->
+      <view class="card-desc">
+        <view class="card-desc-title">品种规格</view>
+        <view class="card-desc-row">
+          <view class="card-desc-field">
+            <van-field value="{{ desc1 }}" placeholder="冠幅" border="{{ false }}" bind:change="onChange6" />
+          </view>
+          <view class="card-desc-text">厘米</view>
+        </view>
+        <view class="card-desc-row margin-right">
+          <view class="card-desc-field">
+            <van-field value="{{ desc2 }}" placeholder="高度" border="{{ false }}" bind:change="onChange7" />
+          </view>
+          <view class="card-desc-text">厘米</view>
+        </view>
+        <view class="card-desc-row margin-right">
+          <view class="card-desc-field">
+            <van-field value="{{ desc3 }}" placeholder="地径" border="{{ false }}" bind:change="onChange8" />
+          </view>
+          <view class="card-desc-text">厘米</view>
+        </view>
+        <view class="card-desc-row margin-right">
+          <view class="card-desc-field">
+            <van-field value="{{ desc4 }}" placeholder="胸径" border="{{ false }}" bind:change="onChange9" />
+          </view>
+          <view class="card-desc-text">厘米</view>
+        </view>
+        <view class="card-desc-row margin-right">
+          <view class="card-desc-field">
+            <van-field value="{{ desc5 }}" placeholder="其它" border="{{ false }}" bind:change="onChange10" />
+          </view>
+        </view>
+      </view>
+      <view class="upload">
+        <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" max-count="1" />
+      </view>
+    </van-cell-group>
+  </view>
+  <view class="button">
+    <van-button type="primary" size="large" color="#5bc32c" bind:click="create">发布</van-button>
+  </view>
+</view>

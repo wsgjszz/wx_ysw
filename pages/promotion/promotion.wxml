@@ -1,0 +1,44 @@
+<!--pages/promotion/promotion.wxml-->
+<scroll-view scroll-y="true" style="height: 940rpx;">
+  <view class="area">
+    <van-cell title="地区选择" is-link bind:click="showPopup" />
+    <van-popup show="{{ show }}" bind:close="onClose" position="top">
+      <van-area area-list="{{ areaList }}" bind:cancel="onClose" bind:confirm="onConfirm" title="地区选择" columns-placeholder="{{ ['省份', '城市','地区'] }}" />
+    </van-popup>
+  </view>
+  <view class="category">
+    <van-tabs active="{{active}}" bind:change="onChange" color="#5bc32c">
+      <van-tab wx:for="{{categoryList}}" title="{{item.categoryName}}" />
+    </van-tabs>
+  </view>
+  <view wx:for="{{list}}" wx:key="index" class="card" data-id="{{item.id}}" catchtap="toDetail">
+    <van-row>
+      <van-col offset="1" span="9">
+        <view class="card-img">
+          <van-image width="280rpx" height="230rpx" fit="cover" radius="30rpx" src="{{item.picture}}" />
+        </view>
+      </van-col>
+      <van-col span="14">
+        <view class="card-info">
+          <view class="card-title">{{item.title}}</view>
+          <view class="card-desc van-multi-ellipsis--l2">{{item.description}}</view>
+          <view class="card-price">售价：
+            <text style="color:#7fd05d;margin: 0 3rpx;">{{item.price}}</text>元/{{item.dw}}</view>
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+  <view wx:if="{{total!=0}}" class="page">
+    <van-row>
+      <van-col offset="3" span="18">
+        <i-page current="{{ current }}" total="{{total}}" bind:change="handleChange">
+          <view slot="prev">Prev</view>
+          <view slot="next">Next</view>
+        </i-page>
+      </van-col>
+    </van-row>
+  </view>
+</scroll-view>
+<view class="button">
+  <van-button type="primary" block color="#5bc32c" catchtap="toCreate">我也发布</van-button>
+</view>

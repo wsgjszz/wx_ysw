@@ -1,0 +1,6 @@
+<!--pages/login/login.wxml-->
+<view class="title">园商网提示您，当前尚未登录</view>
+<view class="btn">
+  <van-button wx:if="{{!isLoading}}" color="#5ac32b" type="primary" size="large" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</van-button>
+  <van-button wx:else color="#5ac32b" type="primary" size="large" loading type="info" loading-text="登录中..." />
+</view>

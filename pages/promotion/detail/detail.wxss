@@ -1,0 +1,43 @@
+/* pages/promotion/detail/detail.wxss */
+/* 卡片模块 */
+.card{
+  margin: 20rpx 20rpx;
+  height: 900rpx;
+}
+.card-info{
+  width: 710rpx;
+}
+.card-text{
+  font-size: 32rpx;
+  margin: 10rpx 0;
+  color: #787878;
+  line-height: 50rpx;
+}
+.card-text text{
+  color: #000;
+  font-weight: 500;
+}
+
+/* 推荐商品模块 */
+.recommend{
+  margin: 0 10rpx 30rpx 10rpx;
+}
+.recommend-card{
+  width: 355rpx;
+  height: 420rpx;
+  box-shadow: 2rpx 2rpx 10rpx rgb(177, 173, 173);
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  display: inline-block;
+}
+.recommend-card-title{
+  margin: 15rpx 20rpx;
+  font-size: 33rpx;
+  font-weight: 500;
+}
+.recommend-card-price{
+  margin: 5rpx 20rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+  color: #72e441;
+}

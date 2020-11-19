@@ -1,0 +1,23 @@
+/* pages/user/myCircle/myCircle.wxss */
+/* 信息卡片 */
+.card{
+  margin: 30rpx 10rpx;
+  height: 280rpx;
+}
+.card-info{
+  height: 270rpx;
+  padding-left: 20rpx;
+  border-bottom: 3rpx solid #e2dfdf;
+}
+.card-name{
+  font-weight: 530;
+  margin: 10rpx;
+}
+.card-area{
+  margin-left: 10rpx;
+  font-size: 30rpx;
+}
+.card-count{
+  margin-top: 120rpx;
+  font-size: 26rpx;
+}

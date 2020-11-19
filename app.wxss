@@ -1,0 +1,17 @@
+/**app.wxss**/
+/* 引入vant的内置样式 */
+@import "/compoments/@vant/weapp/dist/common/index.wxss";
+page{
+  margin: 0;
+  padding: 0;
+  border-top: 2rpx solid #dfdfdf;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 

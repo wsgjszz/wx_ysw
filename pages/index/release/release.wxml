@@ -1,0 +1,69 @@
+<!--pages/index/release/release.wxml-->
+<view class="tab">
+  <!-- 品种描述 -->
+  <van-tabs type="card" bind:click="onClick" color="#5bc32c">
+    <van-tab title="急需买">
+      <view class="card">
+        <view class="card-title">品种描述</view>
+        <van-cell-group>
+          <van-field value="{{ message }}" type="textarea" placeholder="请填写名称，数量，规格等信息" autosize border="{{ false }}" bind:change="onChange1" />
+        </van-cell-group>
+      </view>
+      <!-- 各类选项 -->
+      <view class="options">
+        <!-- 用苗地 -->
+        <van-cell title="用苗地" is-link bind:click="showPopup" />
+        <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+          <van-area area-list="{{ areaList }}" bind:cancel="onClose" bind:confirm="onConfirm" title="用苗地" />
+        </van-popup>
+        <van-cell-group>
+          <!-- 联系人 -->
+          <van-field value="{{ contact }}" clearable label="联系人" placeholder="请输入联系人姓名" bind:change="onChange2" />
+          <!-- 手机 -->
+          <van-field value="{{ phone }}" clearable type="number" label="手机" placeholder="请输入手机号码" border="{{ false }}" bind:change="onChange3" />
+        </van-cell-group>
+        <!-- 求购期限 -->
+        <view class="options-time">
+          <view class="options-time-title">求购期限</view>
+          <van-radio-group value="{{ time }}" bind:change="onChangeTime">
+            <van-radio name="3" checked-color="#07c160">三天</van-radio>
+            <van-radio name="7" checked-color="#07c160">一周</van-radio>
+            <van-radio name="30" checked-color="#07c160">一月</van-radio>
+          </van-radio-group>
+        </view>
+      </view>
+      <view class="button">
+        <van-button type="primary" size="large" color="#5bc32c" bind:click="release">发布</van-button>
+      </view>
+    </van-tab>
+    <van-tab title="正在卖">
+      <view class="card2">
+        <view class="card-title">品种描述</view>
+        <van-cell-group>
+          <van-field value="{{ message }}" type="textarea" placeholder="请填写名称，数量，规格等信息" autosize border="{{ false }}" bind:change="onChange1" />
+        </van-cell-group>
+        <view class="upload">
+          <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead"
+           max-count="1"  />
+        </view>
+      </view>
+      <!-- 各类选项 -->
+      <view class="options">
+        <!-- 用苗地 -->
+        <van-cell title="出苗地" is-link bind:click="showPopup" />
+        <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+          <van-area area-list="{{ areaList }}" bind:cancel="onClose" bind:confirm="onConfirm" title="出苗地" />
+        </van-popup>
+        <van-cell-group>
+          <!-- 联系人 -->
+          <van-field value="{{ contact }}" clearable label="联系人" placeholder="请输入联系人姓名" bind:change="onChange2" />
+          <!-- 手机 -->
+          <van-field value="{{ phone }}" clearable type="number" label="手机" placeholder="请输入手机号码" border="{{ false }}" bind:change="onChange3" />
+        </van-cell-group>
+      </view>
+      <view class="button">
+        <van-button type="primary" size="large" color="#5bc32c" bind:click="release2">发布</van-button>
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/circle/detail/detail.wxml-->
+<view>
+  <view class="card">
+    <view class="card-img">
+      <van-image width="340rpx" height="250rpx" radius="20rpx" fit="cover" src="{{info.picture}}" />
+    </view>
+    <view class="card-info">
+      <view class="card-title">{{info.name}}</view>
+      <view class="card-text">省份：{{info.province}}</view>
+      <view class="card-text">城市：{{info.city}}</view>
+      <view class="card-text">地区：{{info.area}}</view>
+      <view class="card-text">已有<text style="color:#7fd05d;margin: 0 3rpx;">{{info.contactCount}}</text>人联系</view>
+    </view>
+  </view>
+  <view class="info">
+    <view class="info-title">
+      <van-icon name="notes-o" />
+      <text class="info-title-text">自我介绍</text>
+    </view>
+    <van-divider />
+    <rich-text class="info-text">{{info.selfIntroduction}}</rich-text>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<!--pages/user/stars/stars.wxml-->
+<view>
+  <i-action-sheet visible="{{ visible }}" actions="{{ actions }}" show-cancel bind:cancel="handleCancel" bind:click="handleClickItem" mask-closable="{{ false }}">
+    <view slot="header" style="padding: 16px">
+      <view style="color: #444;font-size: 16px">确定吗？</view>
+      <text>删除后无法恢复哦</text>
+    </view>
+  </i-action-sheet>
+  <i-swipeout class="card" wx:for="{{list}}" wx:key="index" operateWidth="{{80}}" unclosable="{{true}}" toggle="{{toggle}}">
+    <view slot="content" data-buyOrSale="{{item.buyOrSale}}" data-id="{{item.id}}" catchtap="toDetail">
+      <view class="card-img">
+        <van-image round width="130rpx" height="130rpx" src="{{item.picture?item.picture:'https://img.yzcdn.cn/vant/cat.jpeg'}}" />
+      </view>
+      <view class="card-des">
+        <view>{{item.contact}}</view>
+        <view>{{item.title}}</view>
+        <view style="font-size:30rpx;color:#8a8a8a;margin-top:10rpx;">{{item.releaseTime}}</view>
+      </view>
+    </view>
+    <view slot="button" class="card-action" style="background:#f4422e;">
+      <view bindtap="actionsTap" data-id="{{item.id}}">
+        <van-icon name="delete" size="60rpx" color="#fff" />
+      </view>
+    </view>
+  </i-swipeout>
+</view>

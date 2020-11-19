@@ -1,0 +1,13 @@
+/* pages/login/login.wxss */
+.title{
+  text-align: center;
+  margin-top: 400rpx;
+  color: #5ac32b;
+  font-weight: 600;
+}
+.btn{
+  position: relative;
+  top: 100rpx;
+  text-align: center;
+  margin: 40rpx 30rpx;
+}

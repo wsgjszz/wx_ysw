@@ -1,0 +1,96 @@
+/* pages/index/buy/buy.wxss */
+@import "/compoments/@vant/weapp/dist/common/index.wxss";
+
+.van-dropdown-menu {
+  border-top: 2rpx solid #dfdfdf !important;
+  border-bottom: 2rpx solid #dfdfdf !important;
+}
+
+.row-card {
+  border-radius: 2%;
+  border: 4rpx solid #eee;
+  overflow: hidden;
+  margin: 20rpx 0;
+  box-shadow: 0 2rpx 2px #888;
+}
+
+.info-img {
+  margin-top: 30rpx;
+}
+
+.info-text {
+  position: relative;
+  font-size: 30rpx;
+  margin-top: 35rpx;
+}
+
+.info-text-title {
+  font-weight: 600;
+  margin-bottom: 15rpx;
+}
+
+.info-text-context {
+  height: 80rpx;
+}
+
+.info-text-time {
+  font-weight: 350;
+  color: #ababab;
+  float: right;
+  margin: 20rpx;
+}
+
+/* 底部选项 */
+.options {
+  width: 100%;
+  background-color: #f7f7f7;
+  align-items: center;
+}
+
+.star-text {
+  float: right;
+  font-size: 28rpx;
+  margin-right: 100rpx;
+  margin-top: 10rpx;
+}
+.release-text {
+  float: right;
+  font-size: 28rpx;
+  margin-right: 125rpx;
+  margin-top: 10rpx;
+  color: #54c124;
+}
+.options van-icon {
+  margin-top: 10rpx;
+}
+/* 收藏按钮 */
+.star {
+  padding: 20rpx 0;
+  border-right: 2rpx solid #ededed;
+}
+.star-on {
+  padding: 20rpx 0;
+  border-right: 2rpx solid #ededed;
+  color: #54c124;
+}
+/* 联系他按钮 */
+.release {
+  padding: 20rpx 0;
+}
+.release-text:active{
+  color: #8cf75e !important;
+}
+
+.info-text-address {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #b8b8b8;
+  font-size: 24rpx;
+  font-weight: 400;
+}
+
+/* 分页 */
+.page{
+  padding: 30rpx 0 !important;
+}

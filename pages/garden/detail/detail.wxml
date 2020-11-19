@@ -1,0 +1,23 @@
+<!--pages/garden/detail/detail.wxml-->
+<view>
+  <view class="card">
+    <view class="card-img">
+      <van-image width="340rpx" height="250rpx" radius="20rpx" fit="cover" src="{{info.picture}}" />
+    </view>
+    <view class="card-info">
+      <view class="card-title">{{info.title}}</view>
+      <view class="card-text">负责人：{{info.resp}}</view>
+      <view class="card-text">地址：{{info.address}}</view>
+      <view class="card-text">联系电话：{{info.telephone}}</view>
+    </view>
+  </view>
+  <view class="info">
+    <view class="info-title">
+      <van-icon name="notes-o" />
+      <text class="info-title-text">苗圃简介</text>
+    </view>
+    <van-divider />
+    <view class="info-message">基地特色苗木品种有：</view>
+    <rich-text class="info-text">{{info.description}}</rich-text>
+  </view>
+</view>

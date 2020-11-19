@@ -1,0 +1,46 @@
+/* pages/user/feedback/feedback.wxss */
+.card{
+  position: relative;
+  margin: 35rpx 10rpx;
+  height: 570rpx;
+  border-bottom: 13rpx solid #f5f5f5;
+}
+.card-title{
+  margin: 10rpx 0;
+  padding-left: 35rpx;
+  font-weight: 500;
+  font-size: 33rpx;
+}
+/* 文件上传框 */
+.upload{
+  position: absolute;
+  bottom: 0;
+  left: 30rpx;
+}
+
+.options{
+  margin-top: -30rpx;
+}
+.options-time{
+  margin-top: 30rpx;
+}
+.options-time-title{
+  float: left;
+  margin-left:40rpx; 
+  font-weight: 350;
+  color: #4f4f52 !important;
+  font-size: 36rpx !important;
+}
+.options-time .van-radio {
+  float: left;
+  margin-left: 30rpx;
+}
+
+.button{
+  width: 98%;
+  height: 110rpx;
+  margin: 0 1%;
+}
+.button button{
+  margin-top: 20rpx;
+}

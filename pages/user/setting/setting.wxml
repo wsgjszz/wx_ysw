@@ -1,0 +1,22 @@
+<!--pages/user/setting/setting.wxml-->
+<view>
+  <van-cell-group>
+    <!-- 用户名 -->
+    <van-field value="{{ userInfo.nickName }}" required clearable label="账户昵称" icon="question-o" placeholder="请输入用户名" bind:click-icon="onClickIcon" bind:change="onChange1" />
+    <!-- 手机 -->
+    <van-field value="{{ userInfo.phone }}" type="number" label="手机" placeholder="请输入手机号码" required border="{{ false }}" bind:change="onChange2" />
+    <view class="gender">
+      <view class="gender-title">性别</view>
+      <van-radio-group value="{{ gender }}" bind:change="onChange">
+        <van-radio name="1" checked-color="#07c160">男</van-radio>
+        <van-radio name="0" checked-color="#07c160">女</van-radio>
+      </van-radio-group>
+    </view>
+    <!-- 验证码 -->
+    <van-field value="{{ sms }}" required center clearable label="验证码" placeholder="请输入短信验证码" border="{{ false }}" use-button-slot bind:change="onChange3">
+      <van-button wx:if="{{!waiting}}" slot="button" size="small" type="primary" color="#5bc32c" bind:click="sendCode">发送验证码</van-button>
+      <van-button wx:else slot="button" size="small" disabled color="#5bc32c">{{time}}s</van-button>
+    </van-field>
+  </van-cell-group>
+  <van-button class="button" type="primary" block color="#5bc32c" catchtap="save">保存</van-button>
+</view>

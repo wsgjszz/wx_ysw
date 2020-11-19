@@ -1,0 +1,6 @@
+<!--pages/user/myGarden/myGarden.wxml-->
+  <view wx:for="{{list}}" wx:key="index" class="card" data-id="{{item.id}}" catchtap="toDetail">
+    <van-image width="712rpx" height="350rpx" fit="cover" src="{{item.picture}}" />
+    <view class="card-title-bg"></view>
+    <view class="card-title">{{item.title}}</view>
+  </view>

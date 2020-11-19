@@ -1,0 +1,70 @@
+/* pages/promotion/create/create.wxss */
+.myContainer {
+  width: 100%;
+  height: 1300rpx;
+  position: absolute;
+}
+.options{
+  margin-top: -30rpx;
+}
+.options-time{
+  margin-top: 30rpx;
+}
+.options-time-title{
+  float: left;
+  margin-left:40rpx; 
+  font-weight: 350;
+  color: #4f4f52 !important;
+  font-size: 36rpx !important;
+}
+.options-time .van-radio {
+  float: left;
+  margin-left: 30rpx;
+}
+
+.button{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+}
+
+/* 品种规格 */
+.card-desc {
+  height: 500rpx;
+  padding: 0 20rpx;
+}
+.card-desc-title {
+  display: inline-block;
+  width: 200rpx;
+  height: 60rpx;
+  font-size: 33rpx;
+  padding-left: 15rpx;
+  color: #323233;
+}
+.card-desc-row{
+  width: 480rpx;
+  height: 60rpx;
+  display: inline-block;
+}
+.margin-right{
+  padding-left: 215rpx;
+}
+.card-desc-field{
+  display: inline-block;
+  width: 350rpx;
+}
+.card-desc-text{
+  display: inline-block;
+  width: 100rpx;
+  height: 80rpx;
+  font-size: 35rpx;
+  color: #9a9a9a;
+}
+
+/* 文件上传框 */
+.upload{
+  position: relative;
+  bottom: 340rpx;
+  left: 10rpx;
+}

@@ -1,0 +1,38 @@
+/* pages/circle/detail/detail.wxss */
+/* 卡片模块 */
+.card{
+  margin: 20rpx 20rpx;
+  height: 260rpx;
+}
+.card-img{
+  float: left;
+}
+.card-info{
+  float: left;
+  width: 340rpx;
+  margin-left: 30rpx;
+}
+.card-title{
+  font-size: 32rpx;
+  font-weight: 600;
+  margin: 10rpx 0 25rpx 0;
+}
+.card-text{
+  font-size: 28rpx;
+  color: #a4a4a4;
+  margin: 10rpx 0;
+}
+/* 简介模块 */
+.info{
+  margin: 0 30rpx;
+}
+.info-title{
+  margin-bottom: -20rpx;
+}
+.info-title-text{
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+.info-text{
+  font-size: 30rpx;
+}

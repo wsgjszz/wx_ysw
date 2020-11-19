@@ -1,0 +1,50 @@
+<!--pages/circle/circle.wxml-->
+<scroll-view scroll-y="true" style="height: 980rpx;">
+  <view class="area">
+    <van-cell title="地区选择" is-link bind:click="showPopup" />
+    <van-popup show="{{ show }}" bind:close="onClose" position="top">
+      <van-area area-list="{{ areaList }}" bind:cancel="onClose" bind:confirm="onConfirm" title="地区选择" columns-placeholder="{{ ['省份', '城市','地区'] }}" />
+    </van-popup>
+    <view class="hot-area">
+      <van-row>
+        <van-col offset="1" span="5">
+          <view class="hot-area-title">热门地区</view>
+        </van-col>
+        <van-col offset="1" span="15">
+          <view class="hot-area-options">
+            <text wx:for="{{hot}}" wx:key="index" catchtap="toHot" data-area="{{item}}">{{item}}</text>
+          </view>
+        </van-col>
+      </van-row>
+    </view>
+  </view>
+  <view wx:for="{{list}}" wx:key="index" class="card" data-id="{{item.id}}" catchtap="toDetail">
+    <van-row>
+      <van-col offset="1" span="7">
+        <view class="card-img">
+          <van-image width="200rpx" height="250rpx" fit="cover" radius="30rpx" src="{{item.picture}}" />
+        </view>
+      </van-col>
+      <van-col span="14">
+        <view class="card-info">
+          <view class="card-name">{{item.name}}</view>
+          <view class="card-area">负责{{item.area}}苗木供求</view>
+          <view class="card-count">已有<text style="color:#7fd05d;margin: 0 3rpx;">{{item.contactCount}}</text>人联系</view>
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+  <view wx:if="{{total!=0}}" class="page">
+    <van-row>
+      <van-col offset="3" span="18">
+        <i-page current="{{ current }}" total="{{total}}" bind:change="handleChange">
+          <view slot="prev">Prev</view>
+          <view slot="next">Next</view>
+        </i-page>
+      </van-col>
+    </van-row>
+  </view>
+</scroll-view>
+<view class="button">
+  <van-button type="primary" block color="#5bc32c" catchtap="toCreate">加入人脉圈</van-button>
+</view>

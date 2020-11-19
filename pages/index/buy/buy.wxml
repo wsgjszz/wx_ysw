@@ -1,0 +1,110 @@
+<!--pages/index/buy/buy.wxml-->
+<view class="myContainer">
+  <!-- 下拉菜单 -->
+  <van-dropdown-menu active-color="#5bc32c">
+    <van-dropdown-item value="{{ value }}" options="{{ option }}" bind:change="onChange" />
+  </van-dropdown-menu>
+  <!-- 信息卡片 -->
+  <view wx:if="{{show}}" class="card">
+    <van-row wx:for="{{demandList}}" wx:key="index">
+      <van-col offset="1" span="22">
+        <view class="row-card">
+          <view class="info">
+            <van-row>
+              <van-col offset="2" span="3">
+                <view class="info-img">
+                  <van-image round width="130rpx" height="130rpx" src="{{item.avatarUrl}}" />
+                </view>
+              </van-col>
+              <van-col offset="3" span="14">
+                <view class="info-text">
+                  <view class="info-text-title">{{item.contact}}</view>
+                  <view class="info-text-context van-multi-ellipsis--l2">{{item.title}}</view>
+                  <view class="info-text-time">{{item.releaseTime}}</view>
+                  <view class="info-text-address">{{item.city}}</view>
+                </view>
+              </van-col>
+            </van-row>
+          </view>
+          <view class="options">
+            <van-row>
+              <van-col offset="4" span="7">
+                <view class="{{item.collectioned?'star-on':'star'}}" catchtap="{{item.collectioned?'downStar':'onStar'}}" data-id="{{item.id}}" data-index="{{index}}">
+                  <van-icon name="star-o" />
+                  <view class="star-text">收藏</view>
+                </view>
+              </van-col>
+              <van-col offset="4" span="9">
+                <view class="release" catchtap="toDetail" data-id="{{item.id}}">
+                  <van-icon name="phone" color="#54c124" />
+                  <view class="release-text">联系他</view>
+                </view>
+              </van-col>
+            </van-row>
+          </view>
+        </view>
+      </van-col>
+    </van-row>
+    <view wx:if="{{total!=0}}" class="page">
+      <van-row>
+        <van-col offset="3" span="18">
+          <i-page current="{{ current }}" total="{{total}}" bind:change="handleChange">
+            <view slot="prev">Prev</view>
+            <view slot="next">Next</view>
+          </i-page>
+        </van-col>
+      </van-row>
+    </view>
+  </view>
+  <view wx:else class="card">
+    <van-row wx:for="{{stars}}" wx:key="index">
+      <van-col offset="1" span="22">
+        <view class="row-card">
+          <view class="info">
+            <van-row>
+              <van-col offset="2" span="3">
+                <view class="info-img">
+                  <van-image round width="130rpx" height="130rpx" src="{{item.avatarUrl}}" />
+                </view>
+              </van-col>
+              <van-col offset="3" span="14">
+                <view class="info-text">
+                  <view class="info-text-title">{{item.contact}}</view>
+                  <view class="info-text-context van-multi-ellipsis--l2">{{item.title}}</view>
+                  <view class="info-text-time">{{item.releaseTime}}</view>
+                  <view class="info-text-address">{{item.city}}</view>
+                </view>
+              </van-col>
+            </van-row>
+          </view>
+          <view class="options">
+            <van-row>
+              <van-col offset="4" span="7">
+                <view class="{{item.collectioned?'star-on':'star'}}" catchtap="{{item.collectioned?'downStar':'onStar'}}" data-id="{{item.id}}" data-index="{{index}}">
+                  <van-icon name="star-o" />
+                  <view class="star-text">收藏</view>
+                </view>
+              </van-col>
+              <van-col offset="4" span="9">
+                <view class="release" catchtap="toDetail" data-id="{{item.id}}">
+                  <van-icon name="phone" color="#54c124" />
+                  <view class="release-text">联系他</view>
+                </view>
+              </van-col>
+            </van-row>
+          </view>
+        </view>
+      </van-col>
+    </van-row>
+    <view wx:if="{{total!=0}}" class="page">
+      <van-row>
+        <van-col offset="3" span="18">
+          <i-page current="{{ current }}" total="{{total}}" bind:change="handleChange">
+            <view slot="prev">Prev</view>
+            <view slot="next">Next</view>
+          </i-page>
+        </van-col>
+      </van-row>
+    </view>
+  </view>
+</view>

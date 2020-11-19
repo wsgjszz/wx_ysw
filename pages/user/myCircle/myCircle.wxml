@@ -1,0 +1,17 @@
+<!--pages/user/myCircle/myCircle.wxml-->
+  <view wx:for="{{list}}" wx:key="index" class="card" data-id="{{item.id}}" catchtap="toDetail">
+    <van-row>
+      <van-col offset="1" span="7">
+        <view class="card-img">
+          <van-image width="200rpx" height="250rpx" fit="cover" radius="30rpx" src="{{item.picture}}" />
+        </view>
+      </van-col>
+      <van-col span="14">
+        <view class="card-info">
+          <view class="card-name">{{item.name}}</view>
+          <view class="card-area">负责{{item.area}}苗木供求</view>
+          <view class="card-count">已有<text style="color:#7fd05d;margin: 0 3rpx;">{{item.contactCount}}</text>人联系</view>
+        </view>
+      </van-col>
+    </van-row>
+  </view>

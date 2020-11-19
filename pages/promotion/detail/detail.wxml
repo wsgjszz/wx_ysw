@@ -1,0 +1,87 @@
+<!--pages/promotion/detail/detail.wxml-->
+<view>
+  <view class="card">
+    <view class="card-img">
+      <van-image width="710rpx" height="400rpx" radius="20rpx" fit="cover" src="{{info.picture}}" />
+    </view>
+    <view class="card-info">
+      <view class="card-text">
+        <van-row>
+          <van-col offset="1" span="6">
+            <text>品种名称：</text>
+          </van-col>
+          <van-col span="16">
+            {{info.title}}
+          </van-col>
+        </van-row>
+      </view>
+      <view class="card-text">
+        <van-row>
+          <van-col offset="1" span="6">
+            <text>品种规格：</text>
+          </van-col>
+          <van-col span="16">
+            {{info.description}}
+          </van-col>
+        </van-row>
+      </view>
+      <view class="card-text">
+        <van-row>
+          <van-col offset="1" span="6">
+            <text>售价：</text>
+          </van-col>
+          <van-col span="16">
+            <text style="color:#7fd05d;margin: 0 3rpx;">{{info.price}}</text>元/颗
+          </van-col>
+        </van-row>
+      </view>
+      <view class="card-text">
+        <van-row>
+          <van-col offset="1" span="6">
+            <text>库存量：</text>
+          </van-col>
+          <van-col span="16">
+            {{info.stock}}{{info.dw}}
+          </van-col>
+        </van-row>
+      </view>
+      <view class="card-text">
+        <van-row>
+          <van-col offset="1" span="6">
+            <text>出苗地：</text>
+          </van-col>
+          <van-col span="16">
+            {{info.province}}{{info.city}}{{info.area}}
+          </van-col>
+        </van-row>
+      </view>
+      <view class="card-text">
+        <van-row>
+          <van-col offset="1" span="6">
+            <text>联系人：</text>
+          </van-col>
+          <van-col span="16">
+            {{info.contact}}
+          </van-col>
+        </van-row>
+      </view>
+      <view class="card-text">
+        <van-row>
+          <van-col offset="1" span="6">
+            <text>电话：</text>
+          </van-col>
+          <van-col span="16">
+            {{info.phone}}
+          </van-col>
+        </van-row>
+      </view>
+    </view>
+  </view>
+  <view class="recommend">
+    <view class="recommend-card" wx:for="{{recommend}}" wx:key="index" catchtap="toDetail" data-id="{{item.id}}">
+      <van-image width="355rpx" height="280rpx" fit="cover" src="{{item.picture}}" />
+      <view class="recommend-card-title van-ellipsis">{{item.title}}</view>
+      <view class="recommend-card-price">￥{{item.price}}</view>
+    </view>
+  </view>
+</view>

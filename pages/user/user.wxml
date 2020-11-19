@@ -1,0 +1,64 @@
+<!--pages/user/user.wxml-->
+<view>
+  <view class="user">
+    <view class="user-info bg-img">
+      <van-row>
+        <van-col offset="2" span="4">
+          <view class="user-img">
+            <van-image round width="120rpx" height="120rpx" src="{{userInfo.avatarUrl}}" />
+          </view>
+        </van-col>
+        <van-col offset="1" span="6">
+          <view wx:if="{{!userInfo}}" catchtap="toLogin" class="login cell">用户登录</view>
+          <view wx:else catchtap="toLogin" catchtap="toLogout" class="login cell">注销</view>
+        </van-col>
+      </van-row>
+    </view>
+    <view class="options">
+      <van-grid column-num="3" clickable="{{true}}">
+        <van-grid-item icon="newspaper-o" text="已发布" link-type="navigateTo" url="./release/release" />
+        <van-grid-item icon="more-o" text="消息" link-type="navigateTo" url="./message/message" dot />
+        <van-grid-item icon="star-o" text="收藏" link-type="navigateTo" url="./stars/stars" />
+      </van-grid>
+    </view>
+    <view class="option-list">
+      <i-cell-group>
+        <i-cell title="账户信息" is-link url="setting/setting" class="cell">
+          <view slot="icon">
+            <van-icon name="manager" color="#dddfe8" />
+          </view>
+        </i-cell>
+      </i-cell-group>
+      <i-cell-group>
+        <i-cell title="我的苗圃" is-link url="/pages/user/myGarden/myGarden" class="cell">
+          <view slot="icon">
+            <van-icon name="fire" color="#dddfe8" />
+          </view>
+        </i-cell>
+      </i-cell-group>
+      <i-cell-group>
+        <i-cell title="我的人脉圈" is-link url="/pages/user/myCircle/myCircle" class="cell">
+          <view slot="icon">
+            <van-icon name="friends" color="#dddfe8" />
+          </view>
+        </i-cell>
+      </i-cell-group>
+    </view>
+    <view class="option-list">
+      <i-cell-group>
+        <i-cell title="联系客服" is-link url="/pages/user/feedback/feedback" class="cell">
+          <view slot="icon">
+            <van-icon name="phone" color="#dddfe8" />
+          </view>
+        </i-cell>
+      </i-cell-group>
+      <i-cell-group>
+        <i-cell title="帮助中心" is-link url="/pages/user/help/help" class="cell">
+          <view slot="icon">
+            <van-icon name="chat" color="#dddfe8" />
+          </view>
+        </i-cell>
+      </i-cell-group>
+    </view>
+  </view>
+</view>

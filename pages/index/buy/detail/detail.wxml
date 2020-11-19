@@ -1,0 +1,43 @@
+<!--pages/index/buy/detail/detail.wxml-->
+<view>
+  <!-- 详情信息 -->
+  <view class="card-info">
+    <view class="card-info-title">{{info.title}}</view>
+    <view class="desc">
+      <view class="desc-text">发布时间：{{info.releaseTime}}</view>
+      <view class="desc-text">求购期限：{{info.limitTime}}</view>
+      <view class="desc-text">用苗地：{{info.city}}{{info.area}}</view>
+      <view class="desc-text">该信息已被查看
+        <text>{{info.viewCount}}</text>次</view>
+    </view>
+  </view>
+  <!-- 用户信息 -->
+  <view class="user-info">
+    <view class="user-info-author">
+      <van-icon name="manager" color="#303030" />
+      <text class="user-info-author-contact">{{info.contact}}</text>
+      <text class="user-info-author-text">（该用户已经过园商网认证审核）</text>
+    </view>
+    <view class="user-info-phone">
+      <van-icon name="phone-circle" />
+      <text class="user-info-phone-text">{{info.phone}}</text>
+    </view>
+    <view class="user-info-desc">
+      <text>联系时请说明是在园商网上看到的，谢谢</text>
+    </view>
+  </view>
+  <!-- 其它信息 -->
+  <view wx:if="{{hasSale}}" class="orther-info">
+    <view class="orther-info-title">
+      <van-icon name="flower-o" />
+      <text>他还在卖</text>
+    </view>
+    <view class="orther-info-img">
+      <scroll-view scroll-x="true" style="width: 100%">
+        <view wx:if="{{saleList}}" class="scroll-img">
+          <van-image width="10rem" height="10rem" fit="contain" src="{{item.picture}}" />
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>
