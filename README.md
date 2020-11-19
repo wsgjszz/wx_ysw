@@ -53,7 +53,7 @@
 
 #### 项目架构图
 
-<img src="md_img/项目架构图.png" style="zoom:67%;" />
+<img src=".\md_img\项目架构图.png" style="zoom:67%;" />
 
 #### 成品效果图
 
